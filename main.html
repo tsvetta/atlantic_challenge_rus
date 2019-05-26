@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1024">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Atlantic Challenge Russia</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900&amp;subset=cyrillic" rel="stylesheet">
+
+
+  <!-- Code snippet to speed up Google Fonts rendering: googlefonts.3perf.com -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500" as="fetch" crossorigin="anonymous">
+  <script type="text/javascript">
+  !function(e,n,t){"use strict";var o="https://fonts.googleapis.com/css?family=Fira+Sans:400,500",r="__3perf_googleFontsStylesheet";function c(e){(n.head||n.body).appendChild(e)}function a(){var e=n.createElement("link");e.href=o,e.rel="stylesheet",c(e)}function f(e){if(!n.getElementById(r)){var t=n.createElement("style");t.id=r,c(t)}n.getElementById(r).innerHTML=e}e.FontFace&&e.FontFace.prototype.hasOwnProperty("display")?(t[r]&&f(t[r]),fetch(o).then(function(e){return e.text()}).then(function(e){return e.replace(/@font-face {/g,"@font-face{font-display:swap;")}).then(function(e){return t[r]=e}).then(f).catch(a)):a()}(window,document,localStorage);
+  </script>
+  <!-- End of code snippet for Google Fonts -->
+
+  <link rel="stylesheet" href="./ui.css">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./gallery.css">
+</head>
+<body>
+  <div class="page-box">
+    <header class="page-header">
+      <div class="logo-box">
+        <svg
+          class="logo"
+          width="318"
+          height="172"
+          viewBox="0 0 318 172"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M182.061 49.849l.051.095c0-.124 0-.165-.007-.166-.006-.001-.019.036-.044.07zm-11.478-20.577c3.972 6.951 7.943 13.902 11.478 20.577-.064.09-.209.163-.539-.463a2453.404 2453.404 0 0 0-7.107-11.06c-7.499-11.637-17.316-26.868-17.738-28.068-.591-2.234 1.185-2.792 2.367-1.677 3.55 6.71 7.545 13.701 11.539 20.691zm-97.32 72.096l-.592 5.033c76.317-4.473 140.797 3.354 215.925 17.328 5.365.921 7.112-8.022 8.221-13.702.238-1.214.445-2.279.653-3.066.594-1.12.594-2.239-1.181-1.679-2.366 1.119-4.141 1.119-6.507 1.119l-36.678-1.119c-2.96 0-5.323-1.676-1.771-5.588 1.178-1.678.588-4.474-.597-6.153-.243-.458-.585-.633-.904-.797-.459-.235-.869-.445-.869-1.433.113-.215.249-.41.381-.599.555-.797 1.051-1.51-.381-3.315-1.182-2.798-3.548 0-2.957 1.677.294.559.441.838.441 1.117.001.28-.147.56-.441 1.12-.296.557-.887.836-1.479 1.115-.591.279-1.183.558-1.479 1.115l-2.96 6.712c-1.199 2.642-1.858.439-2.524-1.786-.319-1.069-.64-2.142-1.024-2.687l1.773-.56c1.775-.558-.591-5.588-1.177-6.146-.596-.561-1.189-.561-1.189-.561l.593-1.116V84.6c-1.185-2.234-4.142-1.117-4.142.563 0 .14.037.348.083.61.139.784.362 2.044-.083 3.302l-1.772.558c-.473.594-.903 1.108-1.302 1.586-1.104 1.322-1.972 2.361-2.841 4.002-2.959 6.148-7.101 7.267-13.015 7.827h-36.089c-1.771 0-3.55-.56-5.323-1.119.593-1.115.593-1.675 0-3.352 0-.627-.372-.902-.803-1.22-.337-.25-.709-.525-.968-1.016-.788-1.115-1.576-1.735-2.363-2.355-.396-.312-.793-.624-1.189-.999v-1.118c-.355-.334-.071-.67.212-1.005.189-.224.378-.448.378-.671.592-2.795-2.953-6.149-3.546-2.795-.309.876.027 1.905.335 2.847.281.86.539 1.65.258 2.182 0 .352-.935.924-1.776 1.439-.499.305-.964.59-1.184.797-.591.558-.591 5.591-.591 6.706h-58.566c0-2.588-.779-4.199-1.477-5.641-.356-.737-.691-1.43-.89-2.186-.454-2.14-.211-2.31.459-2.777.204-.142.447-.312.723-.572 0-.56.593-.56 1.185-.56.59-.558 0-6.707-2.959-4.47-1.571.89-1.307 1.78-1.068 2.585.212.713.404 1.36-.706 1.885-2.959 2.236-7.1 5.588-9.466 12.296l-17.75-2.234 2.959 1.674z"
+            fill="#000"
+            fill-opacity=".92"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M74.882 80.846c-.644-5.271-1.36-11.125-2.21-19.162-.59-1.117-1.776 0-1.182 2.793 0 2.797 3.548 26.274 4.733 33.54 0 .56.59 0 .59 0-.616-6.404-1.231-11.444-1.931-17.17zm-9.309 26.114l4.732-5.032 1.776.559-1.776 3.914-4.732.559zm-18.93 15.65c4.14-12.296 120.68-7.263 135.469-5.59-41.405-1.118-101.751-2.237-129.553 6.15-3.55 1.119-6.508 1.677-5.916-.56zM134.789 38.767c11.241 23.475 15.974 36.89 17.155 59.81 1.775 0 6.508 1.675 7.1-.56 0-6.706 3.548-3.912 2.366-9.504-.591-3.35 5.323-8.383 7.69-1.116 0 1.116-.592 2.795 0 3.914.59 1.675 2.956 3.351 3.549 4.469l2.959 3.913c1.185 1.675 37.86 0 41.408 0 5.327 0 7.693-8.382 13.016-11.736 1.181-.56 0-2.238 1.181-4.475 3.552-5.59 8.875 1.117 9.467 9.504 0 .555 2.368-1.118 3.551-2.235 1.184-1.677-1.777-3.913 1.775-6.152 3.548-2.234 5.915 3.914 6.505 5.593 4.141 10.621.593 11.736.593 11.736l13.607.559 1.778-1.119c1.181-.555-1.186-2.792-1.778-3.91-20.705-25.155-40.82-48.072-68.032-67.075l-31.356-9.504c5.918 9.504 11.837 20.125 16.566 30.744-7.096-2.794-50.875-16.212-49.1-12.856z"
+            fill="#000"
+            fill-opacity=".92"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M77.998 98.016l7.69 1.117c3.547-3.913 5.324-7.265 10.647-10.059-.592-3.912 1.185-9.503 5.918-6.15 2.956 1.675 1.775 7.268 0 9.502-.592 1.115 2.364 5.59 2.956 6.15 4.733 1.676 43.187 1.118 43.779 0 2.956-3.913-4.733-35.774-7.1-35.215-3.551.56-7.689 3.354-7.099 3.913l4.143 2.235-2.366 1.12c-8.285-3.914-22.482 1.114-23.664 6.707l4.138 3.913v.556h-2.365c-16.566-13.973-39.044-7.263-36.677 16.211zM41.32 88.513l32.536 5.028-4.141-28.503-8.873-1.677C54.924 72.303 49.01 80.688 41.32 88.513z"
+            fill="#000"
+            fill-opacity=".92"
+          />
+        </svg>
+
+        <h1 class="page-title">
+          Atlantic Challenge
+          <span class="title-country">Russia</span>
+        </h1>
+      </div>
+      <!-- <div class="banner">
+        <h3 class="banner-title">
+          Atlantic&nbsp;Challenge&nbsp;2020 пройдёт в&nbsp;Санкт-Петербурге
+        </h3>
+        <p class="banner-text">
+          Россия впервые принимает международную молодежную регату парусно-гребных шлюпок Atlantic Challenge, стань участником этого уникального события.
+        </p>
+      </div> -->
+    </header>
+    <main class="page-content">
+      <section class="who-we-are">
+        <h2 class="content-title">Кто мы такие?</h2>
+        <div class="content-intro">
+          <div class="content-half-intro _1">
+            <p class="content-text">
+              Мы занимаемся парусным спортом. Мы — это Atlantic Challenge Russia. Мы не только ходим под парусом и на вёслах, но и участвуем во многих других интересных проектах: строим капитанские гички, парусно-гребные лодки 18 века, организуем морские походы, каждые два года участвуем в международных соревнованиях.
+            </p>
+            <figure class='content-photo-box _lodochka'>
+              <picture class='content-photo'>
+                <img src="./static/1.jpg" width="524" height="290" alt="">
+              </picture>
+
+              <figcaption class='content-photo-title'>
+                Открытие соревнований Atlantic Challenge. Великобритания, 2004 год
+              </figcaption>
+            </figure>
+            <p class="content-text">
+              Мы — часть международного сообщества <a href="http://atlanticchallenge.org/" target="_blank" rel="noreferrer noopener">Atlantic Challenge International</a>. Это меж&shy;ду&shy;на&shy;род&shy;ная не&shy;ком­­&shy;мер&shy;чес&shy;кая про&shy;грам&shy;ма, объе&shy;ди&shy;ня&shy;ю&shy;щая молодежные орга&shy;низации по всему миру: в США, Канаде, Ирландии, Англии, России, Финляндии и других странах. Россий&shy;ская команда принимает участие во всех соревнова&shy;ниях Atlantic Challenge, начиная с 1990 года.
+            </p>
+          </div>
+          <div class="content-half-intro _2">
+            <figure class='content-photo-box'>
+                <picture class='content-photo'>
+                  <img src="./static/2.jpg" width="355" height="500" alt="">
+                </picture>
+
+                <figcaption class='content-photo-title'>
+                  Команда Atlantic Challenge Russia на гичке Dignite. Северная Ирландия, 2018 год
+                </figcaption>
+              </figure>
+              <p class="content-text">
+                Наша цель — обмен морс&shy;ки&shy;ми тра&shy;ди&shy;ци&shy;я&shy;ми и куль&shy;ту&shy;рой, пе&shy;ре&shy;да&shy;ча зна&shy;ний и опы&shy;та о морс&shy;ком де&shy;ле но&shy;вым по&shy;ко&shy;ле&shy;ни&shy;ям участ&shy;ни&shy;ков.
+              </p>
+          </div>
+        </div>
+      </section>
+      <section class="summer">
+        <h2 class="content-title">Летом</h2>
+        <div class="content-summer">
+          <article class="summer-box">
+            <div class="summer-link">
+              <figure class='summer-photo'>
+                <picture class='summer-picture'>
+                  <img src="./static/summer_1.jpg" class="summer-img" height="240" alt="">
+                  <span class="article-hidden-text">
+                    Смотрим салют на&nbsp;воде во&nbsp;время шлюпочного парада 9&nbsp;мая&nbsp;2015 года
+                  </span>
+                </picture>
+                <figcaption class='summer-title'>
+                  Фестивали
+                </figcaption>
+              </figure>
+              <p class="content-text _summer">
+                Участие в&nbsp;фестивалях и&nbsp;празднованиях, организуемых в&nbsp;Санкт-Петербурге.
+              </p>
+            </div>
+          </article>
+          <article class="summer-box">
+            <div class="summer-link">
+              <figure class='summer-photo'>
+                <picture class='summer-picture'>
+                  <img src="./static/summer_2.jpg" class="summer-img" height="240" alt="">
+                  <span class="article-hidden-text">
+                    Ежегоные соревнования Бублик-рейс, 2015&nbsp;год
+                  </span>
+                </picture>
+                <figcaption class='summer-title'>
+                  Соревнования
+                </figcaption>
+              </figure>
+              <p class="content-text _summer">
+                Участие в&nbsp;международных соревнованиях Atlantic Challenge International и&nbsp;городских парусно-гребных гонках.
+              </p>
+            </div>
+          </article>
+          <article class="summer-box">
+            <div class="summer-link">
+              <figure class='summer-photo'>
+                <picture class='summer-picture'>
+                  <img src="./static/summer_3.jpg" class="summer-img" height="240" alt="">
+                  <span class="article-hidden-text">
+                    Участники сборов на&nbsp;форту Тотлебен в&nbsp;августе 2016&nbsp;года
+                  </span>
+                </picture>
+                <figcaption class='summer-title'>
+                  Сборы
+                </figcaption>
+              </figure>
+              <p class="content-text _summer">
+                Сборы на форту Тотлебен. Двухнедельные тренировочные сборы два раза за&nbsp;сезон в&nbsp;уникальном историческом месте в Финском заливе.
+              </p>
+            </div>
+          </article>
+          <article class="summer-box">
+            <div class="summer-link">
+              <figure class='summer-photo'>
+                <picture class='summer-picture'>
+                  <img src="./static/summer_4.jpg" class="summer-img" height="240" alt="">
+                  <!-- <span class="article-hidden-text">
+                    Подпись<br>на две строки
+                  </span> -->
+                </picture>
+                <figcaption class='summer-title'>
+                  Походы
+                </figcaption>
+              </figure>
+              <p class="content-text _summer">
+                По Онежскому озеру и&nbsp;Ладожским шхерам, в Финляндию или еще дальше!
+              </p>
+            </div>
+          </article>
+          <article class="summer-box">
+            <div class="summer-link">
+              <figure class='summer-photo'>
+                <picture class='summer-picture'>
+                  <img src="./static/summer_5.jpg" class="summer-img" height="240" alt="">
+                  <span class="article-hidden-text">
+                    Летняя тренировка в Финском заливе на&nbsp;гичке Dignite, 2015&nbsp;год
+                  </span>
+                </picture>
+                <figcaption class='summer-title'>
+                  Тренировки
+                </figcaption>
+              </figure>
+              <p class="content-text _summer">
+                Выход в Финский залив два раза в неделю под парусом и на веслах. <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLScTagHP4FKKsutvZmibIQntpjibDB1t9NzDgtME4GIWJI6aTQ/viewform">Записаться</a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="summer">
+        <h2 class="content-title">Зимой</h2>
+        <div class="content-summer">
+          <article class="summer-box">
+            <div class="summer-link">
+              <figure class='summer-photo'>
+                <picture class='summer-picture'>
+                  <img src="./static/winter_1.jpg" class="summer-img" height="240" alt="">
+                  <span class="article-hidden-text">
+                    Ремонт Enchante в межсезонье. Яхтенный клуб «Геркулес», 2019&nbsp;год
+                  </span>
+                </picture>
+                <figcaption class='summer-title'>
+                  Верфь
+                </figcaption>
+              </figure>
+              <p class="content-text _summer">
+                Ремонт наших лодок и строительство новой капитанской гички.
+              </p>
+            </div>
+          </article>
+          <article class="summer-box">
+            <div class="summer-link">
+              <figure class='summer-photo'>
+                <picture class='summer-picture'>
+                  <img src="./static/winter_2.jpg" class="summer-img _top" height="240" alt="">
+                  <span class="article-hidden-text">
+                    Участники команды тренируются в Яхтенном порту «Геркулес», февраль&nbsp;2018&nbsp;года
+                  </span>
+                </picture>
+                <figcaption class='summer-title'>
+                  ОФП
+                </figcaption>
+              </figure>
+              <p class="content-text _summer">
+                Тренировки для поддержания физической формы, занятия зимними видами спорта.
+              </p>
+            </div>
+          </article>
+          <article class="summer-box">
+            <div class="summer-link">
+              <figure class='summer-photo'>
+                <picture class='summer-picture'>
+                  <img src="./static/winter_3.jpg" class="summer-img" height="240" alt="">
+                  <span class="article-hidden-text">
+                    Семинар по навигации перед международными соревнования в Дании, 2016&nbsp;год
+                  </span>
+                </picture>
+                <figcaption class='summer-title'>
+                  Семинары
+                </figcaption>
+              </figure>
+              <p class="content-text _summer">
+                Как правильно ходить в море и что нужно знать об участии в международных соревнованиях.
+              </p>
+            <div>
+          </article>
+          <article class="summer-box _subscribe">
+            <p class="subscribe-text">
+              Подпишись на ежемесячную рассылку о будущих мероприятиях, чтобы быть в курсе.
+            </p>
+            <p class="subscribe-text">
+              Без спама. Только приглашения на мероприятия.
+            </p>
+            <div class="subscribe-box">
+              <button type='button' class='subscribe-button' id='subscribe-button-link'>Подписаться</button>
+              <svg class="subscribe-arrow" width="24" height="43" viewBox="0 0 24 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.9058 42.0598C11.4911 42.6461 12.4409 42.6468 13.0271 42.0615L22.5809 32.5234C23.1671 31.9381 23.1679 30.9883 22.5826 30.4021C21.9973 29.8158 21.0475 29.815 20.4613 30.4003L11.9691 38.8787L3.49073 30.3865C2.90542 29.8002 1.95567 29.7994 1.36941 30.3847C0.783143 30.97 0.782368 31.9198 1.36768 32.5061L10.9058 42.0598ZM10.5 0.998776L10.4673 40.9988L13.4673 41.0012L13.5 1.00122L10.5 0.998776Z" fill="#318DFA"/>
+              </svg>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- <section class="gallery">
+        <h2 class="content-title">Галерея</h2>
+        <div class="gallery-content">
+          <div class="gallery-photo-box">
+            <img src="./static/gallery/1.jpg" alt="" class="gallery-photo">
+          </div>
+          <div class="gallery-photo-box">
+            <img src="./static/gallery/1.jpg" alt="" class="gallery-photo">
+          </div>
+          <div class="gallery-photo-box">
+            <img src="./static/gallery/1.jpg" alt="" class="gallery-photo">
+          </div>
+
+          <div class="gallery-photo-box _small">
+            <img src="./static/gallery/1.jpg" alt="" class="gallery-photo">
+          </div>
+          <div class="gallery-photo-box _small">
+            <img src="./static/gallery/1.jpg" alt="" class="gallery-photo">
+          </div>
+          <div class="gallery-photo-box _small">
+            <img src="./static/gallery/1.jpg" alt="" class="gallery-photo">
+          </div>
+          <div class="gallery-photo-box _small">
+            <img src="./static/gallery/1.jpg" alt="" class="gallery-photo">
+          </div>
+          <div class="gallery-photo-box _small">
+            <img src="./static/gallery/1.jpg" alt="" class="gallery-photo">
+          </div>
+          <div class="gallery-photo-box _small">
+            <img src="./static/gallery/1.jpg" alt="" class="gallery-photo">
+          </div>
+          <div class="gallery-photo-box _small">
+            <img src="./static/gallery/1.jpg" alt="" class="gallery-photo">
+          </div>
+          <a href='/gallery' class="gallery-photo-box _small _more">
+            <img src="./static/gallery/1.jpg" alt="" class="gallery-photo">
+          </a>
+        </div>
+      </section> -->
+      <!-- <section class="mass-media">
+        <h2 class="content-title">СМИ о нас</h2>
+        <div class="mass-media-content">
+          <article class="mass-media-article">
+            <a href='/' class="mm-link">
+              <div class="mm-photo">
+                <img src="./static/mass-media/1.jpg" alt="">
+              </div>
+              <h3 class="mm-title">
+                Тренировки по парусному спорту и гребле
+              </h3>
+              <span class="mm-tag">
+                Издание «Европейский университет»
+              </span>
+            </a>
+          </article>
+          <article class="mass-media-article">
+            <a href='/' class="mm-link">
+              <div class="mm-photo">
+                <img src="./static/mass-media/1.jpg" alt="">
+              </div>
+              <h3 class="mm-title _video">
+                Регата на приз фрегата «Штандарт»
+              </h3>
+              <span class="mm-tag">
+                Канал «Теледом»
+              </span>
+            </a>
+          </article>
+          <article class="mass-media-article">
+            <a href='/' class="mm-link">
+              <div class="mm-photo">
+                <img src="./static/mass-media/1.jpg" alt="">
+              </div>
+              <h3 class="mm-title _video">
+                Парад в Санкт-Петербурге
+              </h3>
+              <span class="mm-tag">
+                Первый канал
+              </span>
+            </a>
+          </article>
+        </div>
+        <button class="theme_black-white _wide" type="button">
+          Показать всё
+        </button>
+      </section> -->
+    </main>
+    <section class="training">
+      <div class="training-content">
+        <h2 class="content-title training-title">Приходи на тренировку!</h2>
+        <p class="content-text training-learn">Ничего страшного, если никогда не был в море. Всему научим и всё покажем. Летом выходим в море два раза в неделю. Зимой занимаемся ОФП и работаем на верфи.</p>
+        <p class="content-text">Записывайся по телефону <a href="tel:89500192374">+7 (950) 019-23-74</a> или <a target="_blank" rel="noopener noreferrer" href="https://vk.com/ac_russia">ВКонтакте</a>.</p>
+      </div>
+      <footer class="training-footer">
+        <div class="training-content _flex">
+          <div class="training-sign-in">
+            <h3 class="training-subtitle">Уже был на тренировках?</h3>
+            <p class="content-text">Записывайся в команду, чтобы участвовать в гонках и международных сорев&shy;нованиях.</p>
+            <a target="_blank" rel="noopener noreferrer" class="training-link" href="https://docs.google.com/forms/d/e/1FAIpQLScTagHP4FKKsutvZmibIQntpjibDB1t9NzDgtME4GIWJI6aTQ/viewform">Записаться</a>
+          </div>
+          <form class="training-subscribe" id='subscribe-box'>
+            <h3 class="training-subtitle">Хочешь быть в курсе?</h3>
+            <p class="content-text">Подпишись на рассылку, чтобы знать, когда будут проходить дни открытых дверей, семинары и гонки.</p>
+            <p class="content-text once-a-month">Пишем примерно раз в месяц.</p>
+
+            <div class="input-box">
+              <input  id='subscribe-input' type="text" placeholder="your@email.ru" class='training-input'>
+              <button type='submit' class='submit-button'>Подписаться</button>
+            </div>
+            </form>
+        </div>
+      </footer>
+    </section>
+    <footer class="page-footer">
+      <div class="footer-links">
+        <div class="footer-column">
+          <h5 class="footer-title">Связаться</h5>
+          <div><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://vk.com/ac_russia">ВКонтакте</a></div>
+          <div><a class="footer-link" href="mailto:orgcomm.arc@gmail.com">orgcomm.arc@gmail.com</a></div>
+          <div><a class="footer-link" href="tel:89500192374">+7 950 019-23-74</a></div>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-title">Следить</h5>
+          <div><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/user/AtlanticChallengeRus">Ютьюб</a></div>
+          <div><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/atlanticchallenge_ru/">Инстаграм</a></div>
+          <div><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/atlanticchallengerus/">Фейсбук</a></div>
+        </div>
+        <div class="footer-column">
+          <h5 class="footer-title">Поддержать</h5>
+          <!-- <div><a class="footer-link" target="_blank" rel="noopener noreferrer" href="/">Яндекс-деньги</a></div> -->
+          <div><a class="footer-link" target="_blank" rel="noopener noreferrer" href="https://vk.com/ac_russia?w=app5727453_-34777">Перевод ВК</a></div>
+        </div>
+      </div>
+      <address class="footer-address">
+        <div class="footer-street">
+          ул.&nbsp;Петровская&nbsp;коса д.&nbsp;9, Центральный яхт-клуб,
+        </div>
+        <div class="footer-city">
+          Россия, Санкт-Петербург
+        </div>
+      </address>
+    </footer>
+  </div>
+  <script src='./index.js'></script>
+</body>
+</html>
