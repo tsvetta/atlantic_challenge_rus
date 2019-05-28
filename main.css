@@ -8,10 +8,6 @@
   min-height: 100vh;
 }
 
-.page-header {
-  margin-top: 167px;
-}
-
 .page-content {
   flex-grow: 1;
   padding-top: 27px;
@@ -26,6 +22,7 @@
   font-size: 110px;
   line-height: 147px;
   letter-spacing: -1.5px;
+  text-shadow: 4px 5px 0 white;
   margin-left: 18px;
   text-align: center
 }
@@ -42,11 +39,22 @@
 }
 
 .logo-box {
+  margin-top: 167px;
   position: relative;
   left: -7px;
+  transform: none;
+  transition: transform 0.5s ease;
+  /* position: sticky;
+  top: 0;
+  z-index: 1; */
+}
+
+.logo-box._active {
+  transform: scale(0.3) translateX(95%);
 }
 
 .logo {
+  /* stroke: white; */
   position: absolute;
   right: -35px;
   bottom: 42px;
