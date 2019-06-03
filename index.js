@@ -13,11 +13,13 @@ const initForm = () => {
 
   const showInputError = (errorText) => {
     subscribeInputMessage.classList.add('_error');
+    subscribeInputMessage.classList.remove('_success');
     subscribeInputMessage.innerText = errorText;
   };
 
   const showInputSuccessMessage = (successText) => {
     subscribeInputMessage.classList.add('_success');
+    subscribeInputMessage.classList.remove('_error');
     subscribeInputMessage.innerText = successText;
   };
 
@@ -42,22 +44,22 @@ const initForm = () => {
 
     fetch('https://quiet-oasis-75701.herokuapp.com/emails', {
       method: 'PUT',
-      mode: 'no-cors',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
       },
-      body: {
+      body: JSON.stringify({
         email: subscribeInput.value,
-      },
+      }),
     })
       .then(response => {
-        console.info(response);
         subscribeInput.value = '';
         showInputSuccessMessage(formMessages.success);
       })
       .catch(error => {
-        console.error(error);
         showInputError(formMessages.fail);
+        console.error(error);
       });
   };
 
