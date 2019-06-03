@@ -376,14 +376,17 @@
             <p class="content-text">Записывайся в команду, чтобы участвовать в гонках и международных сорев&shy;нованиях.</p>
             <a target="_blank" rel="noopener noreferrer" class="training-link" href="https://docs.google.com/forms/d/e/1FAIpQLScTagHP4FKKsutvZmibIQntpjibDB1t9NzDgtME4GIWJI6aTQ/viewform">Записаться</a>
           </div>
-          <form class="training-subscribe" id='subscribe-form'>
+          <form class="training-subscribe" id='subscribe-form' novalidate>
             <h3 class="training-subtitle">Хочешь быть в курсе?</h3>
             <p class="content-text">Подпишись на рассылку, чтобы знать, когда будут проходить дни открытых дверей, семинары и гонки.</p>
             <p class="content-text once-a-month">Пишем примерно раз в месяц.</p>
 
             <div class="input-box">
-              <input  id='subscribe-input' type="email" placeholder="your@email.ru" class='training-input'>
-              <button type='submit' class='submit-button'>Подписаться</button>
+              <div class="input-box-wrapper">
+                <input  id='subscribe-input' type="email" placeholder="your@email.ru" class='training-input'>
+                <button type='submit' class='submit-button'>Подписаться</button>
+              </div>
+              <p class="input-box-message" id="subscribe-input-message"><!--Сообщение о статусе отправки--></p>
             </div>
             </form>
         </div>

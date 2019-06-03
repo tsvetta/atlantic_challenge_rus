@@ -388,9 +388,24 @@ a.mm-link:focus {
   margin-top: 13px;
 }
 
-.input-box {
+.input-box-wrapper {
   margin-top: 22px;
   display: flex;
+}
+
+.input-box-message {
+  margin-top: 10px;
+  min-height: 17px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.input-box-message._success {
+  color: green;
+}
+
+.input-box-message._error {
+  color: #D0021B;
 }
 
 .submit-button {
