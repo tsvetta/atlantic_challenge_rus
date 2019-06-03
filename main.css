@@ -446,6 +446,7 @@ a.mm-link:focus {
   line-height: 18px;
   display: inline-block;
   margin-bottom: 3px;
+  padding-right: 25px;
 }
 
 .footer-address {
