@@ -88,9 +88,21 @@
   line-height: 48px;
 }
 
+.content-title-addition-info {
+  font-size: 20px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.72);
+}
+
 .content-text {
   font-size: 20px;
   line-height: 26px;
+}
+
+.heading-3 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
 }
 
 .content-intro {
@@ -464,4 +476,129 @@ a.mm-link:focus {
 
 .footer-street {
   display: block;
+}
+
+
+/* standard table */
+
+.st-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.st-table .cell-content {
+  padding: 10px 15px;
+  display: flex;
+}
+
+.st-table th {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.st-table th .cell-content {
+  font-weight: 500;
+  text-align: left;
+}
+
+.st-table th:not(:last-child),
+.st-table td:not(:last-child) {
+  border-right: 1px solid #e5e5e5;
+}
+
+.st-table tbody tr:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.02)
+}
+
+/* Table with competition results */
+
+.results-table {
+  margin-left: -15px;
+  margin-right: -15px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.results-table .cell-content > *:not(:last-child) {
+  margin-right: 10px;
+}
+
+.results-table .team-info {
+  flex-direction: column;
+}
+
+.results-table .team-name {
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.results-table .additional-info {
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.results-table .score {
+  display: inline-block;
+  width: 35px;
+  padding-left: 7px;
+  box-sizing: border-box;
+
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.results-table .score .unit {
+  margin-left: -7px;
+}
+
+.results-table .penalty {
+  font-weight: normal;
+}
+
+.results-table .place {
+  display: inline-block;
+  width: 55px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.results-table .place .unit {
+  text-align: center;
+}
+
+.results-table .emoji {
+  display: inline-block;
+  transform: scale(0.8);
+  font-size: 26px;
+}
+
+.results-table .fix-emoji-offset {
+  transform: translateY(-3px);
+}
+
+.results-table .time {
+  display: flex;
+  font-variant-numeric: tabular-nums;
+}
+
+.results-table .time .unit {
+  text-align: center;
+}
+
+.results-table .unit-container {
+  position: relative;
+}
+
+.results-table .unit {
+  display: block;
+  width: 100%;
+  line-height: 10px;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.hidden {
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
 }
