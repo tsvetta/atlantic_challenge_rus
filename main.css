@@ -38,14 +38,22 @@
 }
 
 .logo-box {
+  position: relative;
+  outline: none;
+  color: inherit;
+  text-decoration: none;
   margin-top: 167px;
   position: relative;
   left: -7px;
   transform: none;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, color 100ms ease-out;
   /* position: sticky;
   top: 0;
   z-index: 1; */
+}
+
+.logo-box:focus {
+  color: rgba(0, 0, 0, 0.72)
 }
 
 .logo-box._active {
