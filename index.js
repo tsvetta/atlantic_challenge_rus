@@ -110,4 +110,17 @@ initSubscribeLink();
 // };
 
 // initLogoScroll();
+
+function initExperiments() {
+  document.querySelectorAll('.expement-view-remove').forEach(el => el.remove())
+  document.querySelectorAll('.expement-view-only').forEach(el => el.style.display = 'block')
+}
+
+const expsEnabledByUrl = location.search.indexOf('enable-experiments') !== -1
+const expsEnabledByCookie = document.cookie.indexOf('enableExperiments=true') !== -1
+if (expsEnabledByUrl || expsEnabledByCookie) {
+  document.cookie = 'enableExperiments=true'
+  initExperiments()
+}
+
 })();

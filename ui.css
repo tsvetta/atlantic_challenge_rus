@@ -30,27 +30,27 @@ button {
   margin: 0;
 }
 
-a {
+.link {
   color: #318dfa;
   text-decoration: none;
   border-bottom: 3px solid transparent;
 }
 
-a:visited {
+.link:visited {
   color: #6848FF;
 }
 
-a:hover {
+.link:hover {
   color: #0075FA;
 }
 
-a:focus {
+.link:focus {
   outline: none;
   position: relative;
   border-bottom: 3px solid #318DFA;
 }
 
-a:visited:focus {
+.link:visited:focus {
   border-color: #6848FF;
 }
 

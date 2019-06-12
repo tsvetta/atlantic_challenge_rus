@@ -79,6 +79,32 @@
   line-height: 26px;
 }
 
+.banner-button {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  outline: 3px solid white;
+  transition: 100ms outline-width, background-color ease-out;
+  transform: translateZ(0);
+
+  display: inline-block;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.banner-button:hover {
+  outline-width: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.banner-button:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.banner-button:focus {
+  outline-width: 6px;
+}
+
 .content-title {
   font-family: Playfair Display;
   font-weight: bold;
@@ -754,4 +780,9 @@ a.mm-link:focus {
   padding-right: 10px;
   text-align: center;
   font-weight: 500;
+}
+
+/* experiments */
+.expement-view-only {
+  display: none;
 }
