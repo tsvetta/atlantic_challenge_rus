@@ -613,6 +613,7 @@ a.mm-link:focus {
 
 .results-table .time {
   display: flex;
+  width: 50px;
   font-variant-numeric: tabular-nums;
 }
 
@@ -637,12 +638,6 @@ a.mm-link:focus {
 
 .results-table .unit.inline {
   display: inline;
-}
-
-.hidden {
-  opacity: 0;
-  user-select: none;
-  pointer-events: none;
 }
 
 /* tabs */
@@ -727,10 +722,31 @@ a.mm-link:focus {
   font-weight: 500;
 }
 
-.competition-result .place.emoji {
+.competition-result span.place.emoji {
   font-size: 26px;
   line-height: 26px;
   transform: scale(0.8) translateY(1px);
+}
+
+.emoji {
+  display: inline-block;
+  background-image: url(/static/medal-gold.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  height: 22px;
+  width: 15px;
+}
+
+.emoji.medal-gold {
+  background-image: url(/static/medal-gold.png);
+}
+
+.emoji.medal-silver {
+  background-image: url(/static/medal-silver.png);
+}
+
+.emoji.medal-bronze {
+  background-image: url(/static/medal-bronze.png);
 }
 
 .competition-result .score {
