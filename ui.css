@@ -24,6 +24,11 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 
+button {
+  background: transparent;
+  border: 0;
+}
+
 a {
   color: #318dfa;
   text-decoration: none;
@@ -48,7 +53,7 @@ a:visited:focus {
   border-color: #6848FF;
 }
 
-button {
+.button {
   font-size: 20px;
   line-height: 26px;
   padding: 5px 35px;
@@ -58,22 +63,22 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   background-color: #2975CC
 }
 
-button:active {
+.button:active {
   background-color: #2975CC
 }
 
-button:focus {
+.button:focus {
   outline-color: #318DFA;
   outline-offset: 1px;
   outline-style: solid;
   outline-width: 3px;
 }
 
-button.theme_black-white {
+.button.theme_black-white {
   border: 2px solid rgba(0, 0, 0, 0.92);
   color: rgba(0, 0, 0, 0.92);
   box-sizing: border-box;
@@ -84,17 +89,17 @@ button.theme_black-white {
   padding: 7px 35px;
 }
 
-button.theme_black-white:hover {
+.button.theme_black-white:hover {
   background-color: #000;
   color: #fff;
 }
 
-button._size_l {
+.button._size_l {
   font-size: 26px;
   line-height: 31px;
 }
 
-button._wide {
+.button._wide {
   width: 100%;
 }
 
@@ -116,4 +121,8 @@ input:focus {
   outline-offset: 1px;
   outline-style: solid;
   outline-width: 3px;
+}
+
+.soft-hyphen {
+  font-family: sans-serif;
 }
