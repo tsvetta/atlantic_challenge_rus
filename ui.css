@@ -54,6 +54,22 @@ button {
   border-color: #6848FF;
 }
 
+.white-link {
+  color: white;
+  text-decoration: none;
+  border-bottom: 3px solid white;
+  transition: 100ms border-bottom ease-out;
+}
+
+.white-link:hover {
+  border-width: 6px;
+}
+
+.white-link:focus {
+  outline: none;
+  border-width: 6px;
+}
+
 .button {
   font-size: 20px;
   line-height: 26px;
