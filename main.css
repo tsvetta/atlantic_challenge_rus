@@ -52,7 +52,7 @@
   z-index: 1; */
 }
 
-.logo-box:focus {
+.logo-box.focus-visible {
   color: rgba(0, 0, 0, 0.72)
 }
 
@@ -109,7 +109,7 @@
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.banner-button:focus {
+.banner-button.focus-visible {
   outline-width: 6px;
 }
 
@@ -237,7 +237,7 @@
 .summer-link,
 .summer-link:hover,
 .summer-link:active,
-.summer-link:focus,
+.summer-link.focus-visible,
 .summer-link:visited {
   color: rgba(0, 0, 0, 0.92);
 }
@@ -304,12 +304,12 @@
 .mm-link,
 .mm-link:hover,
 .mm-link:active,
-.mm-link:focus,
+.mm-link.focus-visible,
 .mm-link:visited {
   color: rgba(0, 0, 0, 0.92);
 }
 
-a.mm-link:focus {
+a.mm-link.focus-visible {
   outline-color: #318DFA;
   outline-offset: 3px;
   outline-style: solid;
@@ -689,8 +689,8 @@ a.mm-link:focus {
   display: inline-block;
   padding: 12px 15px;
   border-bottom: 3px solid transparent;
+  outline: none;
 }
-
 
 .tab.current {
   border-bottom: 3px solid #318dfa;
@@ -706,19 +706,9 @@ a.mm-link:focus {
   color: inherit;
 }
 
-.tab:focus {
-  outline: none;
-  position: relative;
-}
-
-.tab:focus:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -3px;
-  height: 6px;
-  background: #318dfa;
+.tab.focus-visible {
+  background-color: rgba(49, 139, 250, 0.1);
+  border-bottom: 3px solid #318dfa;
 }
 
 /* Competition results */

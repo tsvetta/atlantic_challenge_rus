@@ -30,6 +30,10 @@ button {
   margin: 0;
 }
 
+button::-moz-focus-inner {
+  border: 0;
+}
+
 .link {
   color: #318dfa;
   text-decoration: none;
@@ -44,13 +48,13 @@ button {
   color: #0075FA;
 }
 
-.link:focus {
+.link.focus-visible {
   outline: none;
   position: relative;
   border-bottom: 3px solid #318DFA;
 }
 
-.link:visited:focus {
+.link:visited.focus-visible {
   border-color: #6848FF;
 }
 
@@ -65,7 +69,7 @@ button {
   border-width: 6px;
 }
 
-.white-link:focus {
+.white-link.focus-visible {
   outline: none;
   border-width: 6px;
 }
@@ -88,7 +92,7 @@ button {
   background-color: #2975CC
 }
 
-.button:focus {
+.button.focus-visible {
   outline-color: #318DFA;
   outline-offset: 1px;
   outline-style: solid;
@@ -121,23 +125,19 @@ button {
 }
 
 input {
-  border: 1px solid transparent;
+  border: 2px solid #318dfa;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 32px;
   padding: 5px 11px;
   width: 100%;
-}
-
-input:hover {
-  border-color: #000;
+  background: white;
 }
 
 input:focus {
-  border-color: #000;
   outline-color: #318DFA;
-  outline-offset: 1px;
+  outline-offset: 0px;
   outline-style: solid;
-  outline-width: 3px;
+  outline-width: 2px;
 }
 
 .soft-hyphen {
