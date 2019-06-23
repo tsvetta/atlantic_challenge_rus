@@ -1,11 +1,11 @@
 const path = require('path')
 const FtpDeploy = require('ftp-deploy')
 const ftpDeploy = new FtpDeploy()
-const creditionals = require('./ftp-creditionals')
+const credentials = require('./ftp-credentials')
 
 const config = {
-  user: creditionals.user,
-  password: creditionals.password,
+  user: credentials.user,
+  password: credentials.password,
   host: '31.31.198.38',
   localRoot: path.join(__dirname, 'src/'),
   remoteRoot: '/',
