@@ -480,7 +480,7 @@ a.mm-link.focus-visible {
 }
 
 .footer-column {
-  width: 31%;
+  width: 40%;
   display: flex;
   flex-direction: column;
 }
