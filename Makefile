@@ -2,7 +2,7 @@
 .PHONY: dev
 dev:
 	open http://localhost:8081/
-	npx concurrently 'python3 -m http.server 8081' 'make css-watch'
+	npx concurrently 'cd ./src && python3 -m http.server 8081' 'make css-watch'
 
 .PHONY: build-prod
 build-prod:

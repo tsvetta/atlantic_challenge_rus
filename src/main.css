@@ -302,11 +302,14 @@
 }
 
 .mm-link,
-.mm-link:hover,
 .mm-link:active,
 .mm-link.focus-visible,
 .mm-link:visited {
   color: rgba(0, 0, 0, 0.92);
+}
+
+.mm-link:hover {
+  color: #318DFA;
 }
 
 a.mm-link.focus-visible {
@@ -320,6 +323,7 @@ a.mm-link.focus-visible {
 .mm-link {
   display: block;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .mm-photo img {
