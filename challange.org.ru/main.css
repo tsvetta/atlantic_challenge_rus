@@ -372,7 +372,7 @@ a.mm-link.focus-visible {
 }
 
 .training-content {
-  padding: 26px 32px 30px 52px;
+  padding: 11px 32px 30px 52px;
   box-sizing: border-box;
 }
 
@@ -403,6 +403,7 @@ a.mm-link.focus-visible {
 }
 
 .training-subtitle {
+  margin-top: 15px;
   margin-bottom: 14px;
   font-weight: 500;
 
@@ -454,6 +455,9 @@ a.mm-link.focus-visible {
 
 .submit-button {
   margin-left: 13px;
+  min-width: 150px;
+  width: 100%;
+  max-width: 200px;
 }
 
 .page-footer {
