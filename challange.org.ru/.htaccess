@@ -1,8 +1,7 @@
 # Редирект с http на https создан автоматически при заказе бесплатного ssl-сертификата
-# TODO: uncomment
-# RewriteEngine On
-# RewriteCond %{SERVER_PORT} !^443$
-# RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^(443|8080)$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 # Конец редиректа
 
 DirectoryIndex index.html index.php
