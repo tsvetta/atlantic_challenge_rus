@@ -1,6 +1,6 @@
 .PHONY: install
 install:
-	composer install
+	./composer install
 	yarn install --frozen-lockfile
 
 .PHONY: start

@@ -1,6 +1,6 @@
 # Get Started
 
-1. Install docker, docker-compose and composer
+1. Install docker, docker-compose
 
 2. Create file `challange.org.ru/core/config/creds.php`
 
