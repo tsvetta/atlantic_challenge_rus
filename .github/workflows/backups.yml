@@ -1,0 +1,30 @@
+name: Run tests
+
+on:
+  schedule:
+    - cron: '55 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Install dependencies
+        run: |
+          mysqldump \
+            --column-statistics=0 \
+            --host=challenge.org.ru \
+            --user=${{ secrets.database_user }} \
+            --password=${{ secrets.database_password }} \
+            --result-file=mysql-backup.sql \
+            ${{ secrets.database_name }}
+
+      - name: Encrypt backup
+        run: gpg --batch --passphrase $encrypt_backup_passphrase -c mysql-backup.sql
+
+      # - name: Upload backup
+      #   uses: actions/upload-artifact@master
+      #   with:
+      #     name: coverage
+      #     path: mysql-backup.sql.gpg
