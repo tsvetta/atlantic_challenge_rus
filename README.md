@@ -2,7 +2,7 @@
 
 1. Install docker, docker-compose and composer
 
-Create file `challange.org.ru/core/config/creds.php`
+2. Create file `challange.org.ru/core/config/creds.php`
 
 ```php
 <?php
@@ -14,8 +14,8 @@ $dbase = 'database_name';
 $table_prefix = 'prefix_';
 ```
 
-1. Run `make install`
-1. Run `make start`
+3. Run `make install`
+4. Run `make start`
 
 # Deploy
 
@@ -24,3 +24,4 @@ $table_prefix = 'prefix_';
 FTP_USER=user
 FTP_PASSWORD=password
 ```
+2. Run `make deploy`
