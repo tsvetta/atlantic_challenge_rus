@@ -25,3 +25,16 @@ FTP_USER=user
 FTP_PASSWORD=password
 ```
 2. Run `make deploy`
+
+# Backups
+
+Backups automaticly created with github actions every hour.
+
+How restore data from backup:
+
+1. Download backup file from Workflow Run page
+1. Decrypt file with the following command. You will be asked for passphrase
+```sh
+gpg --output mysql-backup.sql --decrypt mysql-backup.sql.gpg
+```
+1. Import mysql-backup.sql in PhpMyAdmin
