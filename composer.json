@@ -1,0 +1,5 @@
+{
+    "require": {
+        "dg/ftp-deployment": "^3.2"
+    }
+}

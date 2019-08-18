@@ -1,4 +1,4 @@
-node_modules/
-src/dist/
-
-/ftp-credentials.js
+node_modules
+.env
+/vendor/
+deployment.log

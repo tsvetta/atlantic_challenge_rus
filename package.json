@@ -9,7 +9,7 @@
     "autoprefixer": "^9.6.0",
     "concurrently": "^4.1.0",
     "cssnano": "^4.1.10",
-    "ftp-deploy": "^2.3.3",
+    "env-cmd": "^9.0.3",
     "postcss": "^7.0.17",
     "postcss-cli": "^6.1.2",
     "postcss-font-variant": "^4.0.0",

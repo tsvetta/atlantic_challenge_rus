@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - ./challange.org.ru:/var/www/u0678634/data/www/challenge.org.ru
+    ports:
+      - 8080:80
