@@ -849,8 +849,8 @@ a.mm-link.focus-visible {
 }
 
 .global-gallery-photo {
-  max-width: 50%;
-  display: block;
+  width: 90%;
+  max-width: 920px;
 }
 
 .global-gallery-close-button {
