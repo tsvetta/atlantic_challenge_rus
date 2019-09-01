@@ -835,7 +835,7 @@ a.mm-link.focus-visible {
 
 .global-gallery-wrapper {
   z-index: 1001;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   bottom: 0;
