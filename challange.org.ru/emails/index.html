@@ -1,0 +1,102 @@
+<meta charset="utf-8" />
+<style>
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  code {
+    background-color: #f3f3f3;
+    font-family: 'Fira Code', Menlo, monospace;
+    border-radius: 3px;
+    padding: 2px 5px;
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 500px;
+  }
+
+  thead {
+    background-color: #f3f3f3;
+  }
+
+  td {
+    padding: 10px 15px;
+  }
+
+  textarea {
+    height: 100px;
+    width: 500px;
+  }
+</style>
+
+<body></body>
+
+<script>
+  function getData() {
+    const searchParams = new URLSearchParams(location.search)
+    const auth = searchParams.get('auth')
+
+    if (!auth) {
+      return Promise.resolve({ page: 'need_auth' })
+    }
+
+    return fetch(`https://atlantic-emails.firebaseio.com/emails.json?auth=${auth}`)
+      .then(res => res.json())
+      .then(data => {
+        if (!data || data.error || data.emails && data.emails.error) {
+          return Promise.reject(data)
+        }
+
+        return { page: 'emails', emails: data }
+      })
+  }
+
+  function renderNoAuthPage() {
+    return '<h1>Нет доступа</h1>Добавьте <code>?auth=&lt;firebase_token></code> в URL'
+  }
+
+  function renderErrorPage(error) {
+    return `<h1>Error</h1>${error && error.message || `<br><code>${JSON.stringify(error, null, 2)}</code>`}`
+  }
+
+  function formatDate(date) {
+    if (isNaN(date.getTime())) {
+      return 'Invalid date'
+    }
+
+    return `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`
+  }
+
+  function renderEmailsPage({ emails }) {
+    const emailsList = Object.values(emails)
+    const rows = emailsList
+      .map(email => {
+        const date = new Date(email.addedAt)
+        return `<tr><td>${email.email}</td><td>${formatDate(date)}</td></tr>`
+      })
+
+    const toCopy = `<h2>Copy from here:</h2><textarea>${emailsList.map(email => email.email).join('\n')}</textarea>`
+
+    return `<table><thead><tr><td>Email</td><td>Subscribed at</td></tr></thead><tbody>${rows.join('')}</tbody></table>${toCopy}`
+  }
+
+  function getHtml() {
+    return getData().then(renderData => {
+      return {
+        need_auth: renderNoAuthPage,
+        emails: renderEmailsPage,
+      }[renderData.page](renderData)
+    })
+  }
+
+  getHtml()
+    .catch(error => {
+      console.log('Error', error)
+      return renderErrorPage(error)
+    })
+    .then(html => {
+      document.body.innerHTML = html
+    })
+</script>
