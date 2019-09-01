@@ -860,8 +860,38 @@ a.mm-link.focus-visible {
   top: 10px;
   right: 15px;
   cursor: pointer;
+  transition: color .3s ease;
 }
 
 .global-gallery-close-button:hover {
   color: #318DFA;
+}
+
+.global-gallery-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  width: 90%;
+  max-width: 920px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.global-gallery-prev-button,
+.global-gallery-next-button {
+  font-size: 30px;
+  color: white;
+  width: 300px;
+  cursor: pointer;
+  padding: 0;
+  height: 45px;
+  transition: color .3s ease, background .3s ease;
+}
+
+.global-gallery-prev-button:hover,
+.global-gallery-next-button:hover {
+  color: #318DFA;
+  background-color: rgba(0, 0, 0, 0.4);
 }
