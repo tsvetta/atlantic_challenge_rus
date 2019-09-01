@@ -14,6 +14,7 @@
   width: calc(100% / 3 - 6px);
   margin-bottom: 10px;
   height: 211px;
+  cursor: pointer;
 }
 
 .gallery-photo-box._small {
