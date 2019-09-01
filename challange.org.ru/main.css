@@ -806,7 +806,7 @@ a.mm-link.focus-visible {
 .page-navigation-list {
   display: flex;
   list-style: none;
-  padding: 23px 0;
+  padding: 13px 0;
   margin: 0;
   margin-left: 50px;
 }
@@ -829,6 +829,6 @@ a.mm-link.focus-visible {
 }
 
 .lang-switch {
-  padding: 23px 0;
+  padding: 13px 0;
   margin-right: 50px;
 }
