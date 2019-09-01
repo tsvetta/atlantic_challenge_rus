@@ -789,3 +789,46 @@ a.mm-link.focus-visible {
 .expement-view-only {
   display: none;
 }
+
+.page-navigation-inner {
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.page-navigation {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.page-navigation-list {
+  display: flex;
+  list-style: none;
+  padding: 23px 0;
+  margin: 0;
+  margin-left: 50px;
+}
+
+.page-navigation-item {
+  margin-right: 40px;
+}
+
+.page-navigation-link {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.page-navigation-link:hover {
+  color: #318DFA;
+}
+
+.lang-switch {
+  padding: 23px 0;
+  margin-right: 50px;
+}
