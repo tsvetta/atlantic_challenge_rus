@@ -1,0 +1,30 @@
+name: Create backup
+
+on:
+  schedule:
+    - cron: '12 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Dump database
+        run: >
+          mysqldump
+          --host=challenge.org.ru
+          --user='${{ secrets.database_user }}'
+          --password='${{ secrets.database_password }}'
+          --result-file=mysql-backup.sql
+          ${{ secrets.database_name }}
+
+      - name: Encrypt backup
+        run: gpg --batch --passphrase '${{ secrets.encrypt_backup_passphrase }}' -c mysql-backup.sql
+
+      - name: Upload backup
+        uses: actions/upload-artifact@master
+        with:
+          name: backup
+          path: mysql-backup.sql.gpg
