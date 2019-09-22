@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -19,9 +20,44 @@ body {
   color: rgba(0, 0, 0, 0.92);
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
+}
+
+.article h2 {
+  font-family: Playfair Display;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: -0.6px;
+  line-height: 48px;
+}
+
+.article h3 {
+  font-weight: 500;
+}
+
+.article ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.article li {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 16px;
+}
+
+.article li:before {
+  position: absolute;
+  left: -16px;
+  content: '— '
 }
 
 button {
@@ -30,7 +66,8 @@ button {
   margin: 0;
 }
 
-strong, b {
+strong,
+b {
   font-weight: 500;
 }
 
@@ -45,21 +82,21 @@ button::-moz-focus-inner {
 }
 
 .link:visited {
-  color: #6848FF;
+  color: #6848ff;
 }
 
 .link:hover {
-  color: #0075FA;
+  color: #0075fa;
 }
 
 .link.focus-visible {
   outline: none;
   position: relative;
-  border-bottom: 3px solid #318DFA;
+  border-bottom: 3px solid #318dfa;
 }
 
 .link:visited.focus-visible {
-  border-color: #6848FF;
+  border-color: #6848ff;
 }
 
 .white-link {
@@ -84,20 +121,20 @@ button::-moz-focus-inner {
   padding: 5px 35px;
   border: none;
   color: #fff;
-  background-color: #318DFA;
+  background-color: #318dfa;
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: #2975CC
+  background-color: #2975cc;
 }
 
 .button:active {
-  background-color: #2975CC
+  background-color: #2975cc;
 }
 
 .button.focus-visible {
-  outline-color: #318DFA;
+  outline-color: #318dfa;
   outline-offset: 1px;
   outline-style: solid;
   outline-width: 3px;
@@ -138,7 +175,7 @@ input {
 }
 
 input:focus {
-  outline-color: #318DFA;
+  outline-color: #318dfa;
   outline-offset: 0px;
   outline-style: solid;
   outline-width: 2px;
