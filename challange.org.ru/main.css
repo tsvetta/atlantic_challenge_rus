@@ -113,6 +113,12 @@
   outline-width: 6px;
 }
 
+.banner-secondary-button {
+  margin-left: 30px;
+  outline-width: 0 !important;
+  border-radius: 5px;
+}
+
 .content-title {
   font-family: Playfair Display;
   font-weight: bold;
