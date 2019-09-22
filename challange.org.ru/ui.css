@@ -30,6 +30,10 @@ button {
   margin: 0;
 }
 
+strong, b {
+  font-weight: 500;
+}
+
 button::-moz-focus-inner {
   border: 0;
 }
