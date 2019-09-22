@@ -326,6 +326,7 @@ a.mm-link.focus-visible {
 .mm-link {
   display: block;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .mm-photo img {
