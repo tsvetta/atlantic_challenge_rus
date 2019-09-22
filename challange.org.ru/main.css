@@ -374,6 +374,7 @@ a.mm-link.focus-visible {
 }
 
 .training {
+  padding-top: 15px;
   background-color: rgba(49, 141, 250, 0.1);
 }
 
