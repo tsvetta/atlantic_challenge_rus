@@ -304,7 +304,13 @@
   flex-wrap: wrap;
   margin-top: 26px;
   margin-bottom: 27px;
+  flex-flow: row wrap;
   justify-content: space-between;
+}
+
+.mass-media-content::after {
+  content: "";
+  width: calc(33.33333% - 16px);
 }
 
 .mm-link,
@@ -338,6 +344,7 @@ a.mm-link.focus-visible {
 
 .mass-media-article {
   width: calc(100% / 3 - 16px);
+  margin-bottom: 10px;
 }
 
 .mm-photo {
@@ -353,7 +360,7 @@ a.mm-link.focus-visible {
 
 .mm-title._video::after {
   content: '';
-  background-image: url('./static/icon_yt.svg');
+  background-image: url('../static/icon_yt.svg');
   width: 20px;
   height: 15px;
   display: inline-block;
