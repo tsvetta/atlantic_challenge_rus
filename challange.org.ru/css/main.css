@@ -364,6 +364,16 @@ a.mm-link.focus-visible {
   left: 4px;
 }
 
+.mm-date {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #828282;
+}
+
+.mm-date:empty {
+  display: none;
+}
+
 .mm-tag {
   background-color: #6848FF;
   color: #fff;
