@@ -1,6 +1,7 @@
 
 .page-box {
   width: 1024px;
+  padding-top: 50px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -42,7 +43,7 @@
   outline: none;
   color: inherit;
   text-decoration: none;
-  margin-top: 167px;
+  margin-top: 117px;
   position: relative;
   left: -7px;
   transform: none;

@@ -41,7 +41,7 @@ RewriteRule "/\.|^\.(?!well-known/)" - [F]
 
 
 
-# Rewrite secure requests properly to prevent SSL cert warnings, e.g. prevent 
+# Rewrite secure requests properly to prevent SSL cert warnings, e.g. prevent
 # https://www.example.com when your cert only allows https://secure.example.com
 #RewriteCond %{SERVER_PORT} !^443
 #RewriteRule (.*) https://example.com/$1 [R=301,L]
@@ -57,9 +57,33 @@ RewriteRule "/\.|^\.(?!well-known/)" - [F]
 
 
 # The Friendly URLs part
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)$ index.php?q=$1 [L,QSA,NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(ru|en)/favicon.ico$ favicon.ico [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(ru|en)/static(.*)$ static$2 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(ru|en)/css(.*)$ css$2 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(ru|en)/scripts(.*)$ scripts$2 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(ru|en)/images(.*)$ images$2 [L,QSA]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?q=$1 [L,QSA,NC]
+RewriteRule ^(ru|en)?/?(.*)$ index.php?cultureKey=$1&q=$2 [L,QSA]
 
 
 
