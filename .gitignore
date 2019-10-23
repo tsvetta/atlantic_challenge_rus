@@ -2,3 +2,16 @@ node_modules
 .env
 /vendor/
 deployment.log
+
+/dist/
+
+/core/cache/*
+!/core/cache/.gitkeep
+
+# Depends on how you version your MODX site
+/core/packages/*/*
+
+/core/import/*
+/core/export/*
+
+/core/config/config.inc.php

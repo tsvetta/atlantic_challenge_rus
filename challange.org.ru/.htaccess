@@ -50,38 +50,33 @@ RewriteRule "/\.|^\.(?!well-known/)" - [F]
 
 # Redirect the manager to a specific domain - don't rename the ht.access file
 # in the manager folder to use this this rule
-#RewriteCond %{HTTP_HOST} !^example\.com$ [NC]
-#RewriteCond %{REQUEST_URI} ^/manager [NC]
-#RewriteRule ^(.*)$ https://example.com/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} !^example\.com$ [NC]
+# RewriteCond %{REQUEST_URI} ^/manager [NC]
+# RewriteRule ^(.*)$ https://example.com/$1 [R=301,L]
 
 
 
 # The Friendly URLs part
-# RewriteCond %{REQUEST_FILENAME} !-f
 # RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^(.*)$ index.php?q=$1 [L,QSA,NC]
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(ru|en)/favicon.ico$ favicon.ico [L,QSA]
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(ru|en)/favicon.ico$ favicon.ico [L,QSA]
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(ru|en)/static(.*)$ static$2 [L,QSA]
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(ru|en)/static(.*)$ static$2 [L,QSA]
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(ru|en)/css(.*)$ css$2 [L,QSA]
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(ru|en)/css(.*)$ css$2 [L,QSA]
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(ru|en)/scripts(.*)$ scripts$2 [L,QSA]
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(ru|en)/scripts(.*)$ scripts$2 [L,QSA]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(ru|en)?/?(.*)$ index.php?cultureKey=$1&q=$2 [L,QSA]
-
-
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA,NC]
+# RewriteRule ^(ru|en)?/?(.*)$ index.php?cultureKey=$1&q=$2 [L,QSA]
 
 # Make sure .htc files are served with the proper MIME type, which is critical
 # for XP SP2. Un-comment if your host allows htaccess MIME type overrides.
